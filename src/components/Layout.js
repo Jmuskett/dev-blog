@@ -66,8 +66,8 @@ const TemplateWrapper = ({ children }) => {
             </Link>
           </div>
           <div className="md:flex">
-            <p className="text-white ">About</p>
-            <p className="text-white ">Contact</p>
+            <p className="text-white md:pr-11 ">About</p>
+            <p className="text-white md:pr-11 ">Contact</p>
           </div>
         </div>
       </div>
