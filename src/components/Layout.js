@@ -5,6 +5,8 @@ import Navbar from "../components/Navbar";
 import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
+import bgImage from "../img/bg.jpeg";
+import { Link } from "gatsby";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -48,9 +50,29 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
+      {/* <Navbar /> */}
+      <div
+        style={{ backgroundImage: `url(${bgImage})` }}
+        className="text-left text-4xl  bg-violet-800 font-extrabold bg-fixed py-11 px-11"
+      >
+        <div className="flex flex-initial flex-row justify-between">
+          <div>
+            <Link to="/" className="cursor-pointer">
+              <p>
+                <span className="flex bg-clip-text text-transparent bg-gradient-to-r from-lime-100 to-lime-400 tracking-widest animate-pulse		">
+                  John Muskett
+                </span>
+              </p>
+            </Link>
+          </div>
+          <div className="flex flex-initial">
+            <p className="text-white pr-11">About</p>
+            <p className="text-white pr-11">Contact</p>
+          </div>
+        </div>
+      </div>
       <div>{children}</div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
