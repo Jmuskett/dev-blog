@@ -10,21 +10,13 @@ import FullWidthImage from "../components/FullWidthImage";
 import bgImage from "../img/bg.jpeg";
 
 // eslint-disable-next-line
-export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
-}) => {
+export const IndexPageTemplate = ({ image }) => {
   const heroImage = getImage(image) || image;
 
   return (
-    <>
+    <div>
       <BlogRoll />
-    </>
+    </div>
   );
 };
 

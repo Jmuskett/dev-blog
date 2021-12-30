@@ -66,12 +66,12 @@ const TemplateWrapper = ({ children }) => {
             </Link>
           </div>
           <div className="md:flex">
-            <p className="text-white pr-11">About</p>
-            <p className="text-white pr-11">Contact</p>
+            <p className="text-white ">About</p>
+            <p className="text-white ">Contact</p>
           </div>
         </div>
       </div>
-      <div>{children}</div>
+      <div className="bg-slate-900">{children}</div>
       {/* <Footer /> */}
     </div>
   );
