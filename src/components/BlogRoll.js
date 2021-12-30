@@ -16,7 +16,7 @@ class BlogRollTemplate extends React.Component {
             console.log(post.frontmatter.featuredimage);
             return (
               <div key={post.id}>
-                <article className="text-center px-11 py-11 my-11 border-solid rounded-3xl shadow-xl border-2 hover:border-2 hover:cursor-pointer hover:shadow-2xl  hover:border-lime-400 ">
+                <article className="text-center px-11 py-11 my-11 border-solid border-slate-400 rounded-3xl shadow-xl border-4 hover:border-4 hover:cursor-pointer hover:shadow-2xl  hover:border-lime-400 ">
                   <header>
                     {post.frontmatter.featuredimage ? (
                       <div>

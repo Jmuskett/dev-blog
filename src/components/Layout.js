@@ -53,10 +53,10 @@ const TemplateWrapper = ({ children }) => {
       {/* <Navbar /> */}
       <div
         style={{ backgroundImage: `url(${bgImage})` }}
-        className="text-left text-4xl  bg-violet-800 font-extrabold bg-fixed py-11 px-11"
+        className=" text-4xl  bg-violet-800 font-extrabold bg-fixed py-11 px-11 "
       >
-        <div className="flex flex-initial flex-row justify-between">
-          <div>
+        <div className="container text-center flex flex-initial justify-center flex-col  md:flex-row md:justify-between ">
+          <div className="flex justify-center">
             <Link to="/" className="cursor-pointer">
               <p>
                 <span className="flex bg-clip-text text-transparent bg-gradient-to-r from-lime-100 to-lime-400 tracking-widest animate-pulse		">
@@ -65,7 +65,7 @@ const TemplateWrapper = ({ children }) => {
               </p>
             </Link>
           </div>
-          <div className="flex flex-initial">
+          <div className="md:flex">
             <p className="text-white pr-11">About</p>
             <p className="text-white pr-11">Contact</p>
           </div>
