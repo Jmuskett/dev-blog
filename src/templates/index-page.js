@@ -20,7 +20,7 @@ export const IndexPageTemplate = ({ image }) => {
     <>
       <div
         style={{ backgroundImage: `url(${bgImage})` }}
-        className=" text-4xl z-20  bg-violet-800 font-extrabold bg-fixed py-11 px-11 min-h-screen min-w-full"
+        className=" text-4xl z-20  bg-violet-800 font-extrabold bg-fixed px-11 min-h-screen min-w-full"
       >
         <div className="invisible md:visible transition-opacity ease-in  duration-75 container text-center flex  flex-initial justify-center flex-col  md:flex-row md:justify-between  ">
           <div className="flex justify-center   ">
@@ -39,8 +39,8 @@ export const IndexPageTemplate = ({ image }) => {
       </div>
 
       <Parallax pages={6} style={{ top: "0", left: "0" }}>
-        <ParallaxLayer offset={0} speed={2.5}>
-          <div className="py-24">
+        <ParallaxLayer offset={0.25} speed={2.5}>
+          <div className="pt-24">
             <Astronaught />
           </div>
 
@@ -62,7 +62,7 @@ export const IndexPageTemplate = ({ image }) => {
         </ParallaxLayer>
         <ParallaxLayer
           className=" flex min-h-fit flex-col bg-red-500"
-          offset={2}
+          offset={1.75}
         >
           <div>
             <BlogRoll />
@@ -70,7 +70,7 @@ export const IndexPageTemplate = ({ image }) => {
         </ParallaxLayer>
 
         <div className="min-h-screen flex justify-center">
-          <ParallaxLayer offset={4} speed={1.5}>
+          <ParallaxLayer offset={3.25} speed={1.5}>
             <div className="py-24">
               <RocketShip />
             </div>
