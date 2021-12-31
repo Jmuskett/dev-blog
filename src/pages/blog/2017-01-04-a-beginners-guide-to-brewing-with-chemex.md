@@ -1,29 +1,66 @@
 ---
 templateKey: blog-post
-title: A beginners’ guide to brewing with Chemex
+title: "React Hooks: Making a simple counter with the useState hook"
 date: 2017-01-04T15:04:10.000Z
+description: An introduction to React hooks
 featuredpost: false
-featuredimage: /img/chemex.jpg
-description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
+featuredimage: /img/reactlogo.png
 tags:
   - brewing
   - chemex
 ---
-![chemex](/img/chemex.jpg)
+![React logo](/img/reactlogo.png)
 
-This week we’ll **take** a look at all the steps required to make astonishing coffee with a Chemex at home. The Chemex Coffeemaker is a manual, pour-over style glass-container coffeemaker that Peter Schlumbohm invented in 1941, and which continues to be manufactured by the Chemex Corporation in Chicopee, Massachusetts.
+[Hooks](https://reactjs.org/docs/hooks-intro.html) are an upcoming feature (currently in alpha) that are set to offer a brand new way of creating React components. I’m going to look at each of these new tools in turn, and the benefits of using them, starting with what is likely to be the most commonly used, the useState hook.
 
-In 1958, designers at the [Illinois Institute of Technology](https://www.spacefarm.digital) said that the Chemex Coffeemaker is _"one of the best-designed products of modern times"_, and so is included in the collection of the Museum of Modern Art in New York City.
+This post assumes at least a basic familiarity with React, but to recap the context of what we’re looking at we need to understand the two current ways of writing React components.
 
-## The little secrets of Chemex brewing
+# *Stateless Functional Components.*
 
-The Chemex Coffeemaker consists of an hourglass-shaped glass flask with a conical funnel-like neck (rather than the cylindrical neck of an Erlenmeyer flask) and uses proprietary filters, made of bonded paper (thicker-gauge paper than the standard paper filters for a drip-method coffeemaker) that removes most of the coffee oils, brewing coffee with a taste that is different than coffee brewed in other coffee-making systems; also, the thicker paper of the Chemex coffee filters may assist in removing cafestol, a cholesterol-containing compound found in coffee oils. Here’s three important tips newbies forget about:
+Functional components, also known as ‘dumb’ components are solely concerned with rendering. They don’t control any logic. The most basic example of this would be a simple ‘Hello World’ component
 
-1. Always buy dedicated Chemex filters.
-2. Use a scale, don’t try to eyeball it.
-3. Never skip preheating the glass.
-4. Timing is key, don’t forget the clock.
+![](https://miro.medium.com/max/1400/1*jiPwZ__arvCck4fEJaUftw.png)
 
-The most visually distinctive feature of the Chemex is the heatproof wooden collar around the neck, allowing it to be handled and poured when full of hot water. This is turned, then split in two to allow it to fit around the glass neck. The two pieces are held loosely in place by a tied leather thong. The pieces are not tied tightly and can still move slightly, retained by the shape of the conical glass.
+# Class Components
 
-For a design piece that became popular post-war at a time of Modernism and precision manufacture, this juxtaposition of natural wood and the organic nature of a hand-tied knot with the laboratory nature of glassware was a distinctive feature of its appearance.
+Class components can contain and manage internal state. Below is an example of a class component that keeps track of a counter. The user can interact with increment or decrement buttons to raise or lower the counter
+
+![](https://miro.medium.com/max/1400/1*FFFl2w2m1gtXyoUE_4hVIg.png)
+
+
+
+This is pretty straightforward and easy for a human reader to parse, but it’s also fairly verbose and there’s a few things going on, like calling super() and using ‘this’, that may not immediately make sense.
+
+The useState hook Allows us to combine functional components with stateful logic. Instead of using a class, we can create a functional component instead, and call the useState method anywhere that we want to declare some state (and associated handlers). Let’s refactor our counter, using this new syntax.
+
+![](https://miro.medium.com/max/1400/1*MGlrNmHUaT_2Gku11LLfLw.png)
+
+We can see straight away that this is significantly more terse. There’s way less cognitive overhead involved with working out exactly what this component is doing. Let’s walk through it line by line and see what’s going on.
+
+![](https://miro.medium.com/max/1400/1*RAaAl1ewme3yjN165TOctw.png)
+
+
+
+* We start by using [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to declare two variables, our state (count) and our state updater (setCount)
+
+
+
+![](https://miro.medium.com/max/1400/1*SOktA-wSs5Ea8FtRp2OqXw.png)
+
+* In our return function, our setCount state updater is now immediately available to us, without having to make any more function declarations. Since we’re not using a class anymore, we can also drop ‘this’, as there’s no need to worry about execution context.
+
+
+
+![](https://miro.medium.com/max/1400/1*RkVYeqs0s3Ob0T_oZYYleg.png)
+
+* our ‘count’ state is also available to use straight away, with no extra declarations or context to worry about.
+
+  We can also extend our state updater functions if we want
+
+![](https://miro.medium.com/max/1400/1*_5CLF6bDqh8QgwXMnk3Hyg.png)
+
+It looks likely that hooks will replace class components as the go to techniques for writing stateful components in React. The syntax is really clear, and we don’t have to worry about some of things we had to with class components, like inheritance and ‘this’. It’s also way less lines of code, which will make a huge difference as component and application complexity scales up.
+
+Finally, this also keeps our code far more functional, since a component completely encapsulates its logic and render, and we don’t have to worry about potential side effects.
+
+To get started with useState, just run npm install react@next and react-dom@next in your react application and give it a go!
