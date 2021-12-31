@@ -8,6 +8,7 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
 import bgImage from "../img/bg.jpeg";
+import synthWave from "../img/synthwave.jpeg";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({ image }) => {
@@ -16,6 +17,7 @@ export const IndexPageTemplate = ({ image }) => {
   return (
     <div>
       <BlogRoll />
+      <div className="bg-contain bg-no-repeat bg-center min-w-screen bg-clip-content bg-origin-border min-h-screen bg-red-400"></div>
     </div>
   );
 };

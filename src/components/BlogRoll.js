@@ -13,7 +13,6 @@ class BlogRollTemplate extends React.Component {
       <div className="px-11 py-11 flex flex-initial  flex-col md:flex-row">
         {posts &&
           posts.map(({ node: post }) => {
-            console.log(post.frontmatter.featuredimage);
             return (
               <div key={post.id}>
                 <Link
