@@ -11,7 +11,7 @@ class BlogRollTemplate extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
     const numberOfPosts = posts ? posts.length : 0;
     return (
-      <div className="px-11 pt-48 flex align-middle  items-stretch justify-center">
+      <div className="px-11 md:pt-48 flex align-middle  items-stretch justify-center">
         <Parallax horizontal pages={numberOfPosts}>
           {posts &&
             posts.map(({ node: post }, idx) => {
@@ -19,7 +19,7 @@ class BlogRollTemplate extends React.Component {
                 <ParallaxLayer offset={idx} key={post.id}>
                   <div className="grow-0 shrink-0 ">
                     <Link
-                      className="text-4xl text-white hover:text-white my-6"
+                      className="text-4xl text-white hover:text-white py-11"
                       to={post.fields.slug}
                     >
                       <article className="text-center mx-11 px-11 py-11 my-11 border-solid  rounded-3xl shadow-xl  hover:cursor-pointer md:mx-6   ">
