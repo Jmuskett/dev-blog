@@ -19,7 +19,9 @@ In this blog post, I’ll explain how to solve the task, as well as how to itera
 
 Like all coding problems, the best way to approach this task is to break it down into smaller pieces.
 
-# **Step 1: Creating our array of numbers.**
+
+
+**Step 1: Creating our array of numbers**
 
 Our first step is to create an empty function, which will ultimately run all of our code.
 
@@ -35,8 +37,6 @@ Our next step introduces our first piece of logic. We want to create a counter t
 
 This loop sets a variable of ‘i’, which we will use as our counter. We set i to 1, as we want to run from 1 to 100, rather than 0 to 100. We then set our end clause, by saying that as long as the length of our array, ‘arr’ is less than 100, run the code in the loop. Finally, we increment our i variable by 1 each time we run the code.
 
-
-
 ![](https://miro.medium.com/max/1400/1*uBd2vH_iA_9zM3JNxuspXg.png)
 
 If we wanted to just return number 1 to 100, we could do so at this stage by calling the ‘push’ array method on the ‘arr’ array, like this.
@@ -45,7 +45,9 @@ If we wanted to just return number 1 to 100, we could do so at this stage by cal
 
 This is the end of our first step.
 
-# Step two: Replacing our numbers with “fizz” and “buzz”
+
+
+**Step two: Replacing our numbers with "fizz" and "buzz"**
 
 In order to replace our numbers with ‘Fizz’ and “Buzz”, we need to take an extra step and set up an if/else statement.
 
@@ -60,8 +62,6 @@ Otherwise, if the number (i) divided by 5 has no remainder, push the string ‘b
 Finally, if neither of these conditions are true, just push the number (i) to the array.
 
 We’re most of the way there, but we wanted to print “FizzBuzz” if the number is divisible by both 3 AND 5. Luckily, this extra step is very straight forward.
-
-
 
 ![](https://miro.medium.com/max/1400/1*iKHi4xjCBoj--cmCOdJxCw.png)
 
@@ -98,8 +98,6 @@ We replace the hardcoded 3 and 5 in the if/else with n1/n2, to take a custom inp
 
 This is how our final code should look
 
-
-
 ![](https://miro.medium.com/max/1400/1*R4_Pkh9adVsXH8KASKYuaA.png)
 
 We can now run the code with our custom arguments, like this:\
@@ -112,8 +110,6 @@ We can also call single numbers from our array like this
 
 ![](https://miro.medium.com/max/1400/1*F8aQuAs_BDcNWY1hQV26kQ.png)\
 which will just return whatever is at index 19, resulting in
-
-
 
 ![](https://miro.medium.com/max/996/1*_pKuvwfD_w7uVhlbg6Ts7w.png)
 
