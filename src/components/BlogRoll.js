@@ -10,7 +10,7 @@ class BlogRollTemplate extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <div className="px-11 py-11 flex flex-initial  flex-col md:flex-row">
+      <div className="px-11 flex flex-initial  flex-col md:flex-row">
         {posts &&
           posts.map(({ node: post }) => {
             return (

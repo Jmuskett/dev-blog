@@ -9,14 +9,15 @@ import BlogRoll from "../components/BlogRoll";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import spaceman from "../img/spaceman.svg";
 import { Astronaught } from "../components/Astronaught";
+import { RocketShip } from "../components/RocketShip";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({ image }) => {
   const heroImage = getImage(image) || image;
 
   return (
-    <Parallax pages={2} style={{ top: "0", left: "0" }}>
-      <ParallaxLayer offset={0}>
+    <Parallax pages={6} style={{ top: "0", left: "0" }}>
+      <ParallaxLayer offset={0} speed={2.5}>
         <div className="py-24">
           <Astronaught />
         </div>
@@ -37,11 +38,30 @@ export const IndexPageTemplate = ({ image }) => {
           </div>
         </div>
       </ParallaxLayer>
-      <ParallaxLayer offset={1}>
-        <div className="bg-contain bg-no-repeat bg-center min-w-screen bg-clip-content bg-origin-border min-h-screen bg-red-500">
+      <ParallaxLayer offset={2}>
+        <div className="z-30 bg-contain bg-no-repeat bg-center min-w-screen bg-clip-content bg-origin-border min-h-screen bg-red-500">
           <BlogRoll />
         </div>
       </ParallaxLayer>
+
+      <div className="min-h-screen flex justify-center">
+        <ParallaxLayer
+          offset={4}
+          speed={1.5}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <RocketShip />
+        </ParallaxLayer>
+      </div>
+      {/* <ParallaxLayer offset={5}>
+        <div className="bg-white fixed bottom-0 min-w-full">
+          Here is my footer
+        </div>
+      </ParallaxLayer> */}
     </Parallax>
   );
 };

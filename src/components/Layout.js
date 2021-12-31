@@ -60,7 +60,7 @@ const TemplateWrapper = ({ children }) => {
           <div className="flex justify-center   ">
             <Link to="/" className="cursor-pointer">
               <p>
-                <span className="flex bg-clip-text text-transparent bg-gradient-to-r from-lime-100 to-lime-400 tracking-widest animate-pulse		">
+                <span className=" text-white flex bg-clip-text md:text-transparent md:bg-gradient-to-r md:from-lime-100 md:to-lime-400 tracking-widest animate-pulse		">
                   John Muskett
                 </span>
               </p>
