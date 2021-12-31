@@ -16,19 +16,19 @@ tags:
 
 This post assumes at least a basic familiarity with React, but to recap the context of what we’re looking at we need to understand the two current ways of writing React components.
 
-# *Stateless Functional Components.*
+
+
+**Stateless Functional Components**
 
 Functional components, also known as ‘dumb’ components are solely concerned with rendering. They don’t control any logic. The most basic example of this would be a simple ‘Hello World’ component
 
 ![](https://miro.medium.com/max/1400/1*jiPwZ__arvCck4fEJaUftw.png)
 
-# Class Components
+**Class Components**
 
 Class components can contain and manage internal state. Below is an example of a class component that keeps track of a counter. The user can interact with increment or decrement buttons to raise or lower the counter
 
 ![](https://miro.medium.com/max/1400/1*FFFl2w2m1gtXyoUE_4hVIg.png)
-
-
 
 This is pretty straightforward and easy for a human reader to parse, but it’s also fairly verbose and there’s a few things going on, like calling super() and using ‘this’, that may not immediately make sense.
 
@@ -40,17 +40,11 @@ We can see straight away that this is significantly more terse. There’s way le
 
 ![](https://miro.medium.com/max/1400/1*RAaAl1ewme3yjN165TOctw.png)
 
-
-
 * We start by using [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to declare two variables, our state (count) and our state updater (setCount)
-
-
 
 ![](https://miro.medium.com/max/1400/1*SOktA-wSs5Ea8FtRp2OqXw.png)
 
 * In our return function, our setCount state updater is now immediately available to us, without having to make any more function declarations. Since we’re not using a class anymore, we can also drop ‘this’, as there’s no need to worry about execution context.
-
-
 
 ![](https://miro.medium.com/max/1400/1*RkVYeqs0s3Ob0T_oZYYleg.png)
 
