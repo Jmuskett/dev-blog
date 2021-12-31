@@ -11,7 +11,7 @@ class BlogRollTemplate extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
     const numberOfPosts = posts ? posts.length : 0;
     return (
-      <div className="px-11 py-48 flex min-h-screen items-stretch justify-center">
+      <div className="px-11 pt-48 flex  items-stretch justify-center">
         <Parallax horizontal pages={numberOfPosts}>
           {posts &&
             posts.map(({ node: post }, idx) => {
@@ -51,8 +51,12 @@ class BlogRollTemplate extends React.Component {
                 </ParallaxLayer>
               );
             })}
-          {/* <img src={scrollHorizontal} /> */}
         </Parallax>
+        <div className="flex justify-center">
+          <p className="text-white text-center font-extrabold text-7xl animate-pulse fixed bottom-40">
+            {"< >"}
+          </p>
+        </div>
       </div>
     );
   }

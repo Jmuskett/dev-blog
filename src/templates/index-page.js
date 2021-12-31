@@ -60,8 +60,8 @@ export const IndexPageTemplate = ({ image }) => {
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={2}>
-          <div className="z-30 bg-contain bg-no-repeat bg-center min-w-screen bg-clip-content bg-origin-border min-h-screen bg-red-500">
+        <ParallaxLayer className=" flex flex-col bg-red-500" offset={2}>
+          <div>
             <BlogRoll />
           </div>
         </ParallaxLayer>
