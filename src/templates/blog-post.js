@@ -22,7 +22,7 @@ export const BlogPostTemplate = ({
     <>
       <div
         style={{ backgroundImage: `url(${bgImage})` }}
-        className=" text-4xl z-20  bg-violet-800 font-extrabold bg-fixed py-11 px-11 min-h-full min-w-full"
+        className="invisible md:visible text-4xl z-20  bg-violet-800 font-extrabold bg-fixed py-11 px-11 min-h-full min-w-full"
       >
         <div className="invisible md:visible transition-opacity ease-in  duration-75 container text-center flex  flex-initial justify-center flex-col  md:flex-row md:justify-between  ">
           <div className="flex justify-center   ">
@@ -37,6 +37,18 @@ export const BlogPostTemplate = ({
             <p className="text-white md:pr-11 ">About</p>
             <p className="text-white md:pr-11 ">Contact</p>
           </div>
+        </div>
+      </div>
+
+      <div className="visible md:invisible  duration-75 container flex justify-center flex-col  md:flex-row md:justify-between     ">
+        <div className="flex justify-start  container   ">
+          <Link to="/" className="cursor-pointer">
+            <p>
+              <span className="flex text-lime-400 tracking-widest animate-pulse		">
+                John Muskett
+              </span>
+            </p>
+          </Link>
         </div>
       </div>
 

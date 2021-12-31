@@ -40,6 +40,7 @@ class BlogRollTemplate extends React.Component {
                         <div>
                           <span>{post.frontmatter.date}</span>
                         </div>
+
                         {/* <p>
                   {post.excerpt}
                   <br />
@@ -53,7 +54,7 @@ class BlogRollTemplate extends React.Component {
             })}
         </Parallax>
         <div className="flex justify-center">
-          <p className="text-white text-center font-extrabold text-7xl animate-pulse fixed bottom-40">
+          <p className="text-white text-center font-extrabold p text-7xl animate-pulse fixed bottom-20 md:bottom-40">
             {"< >"}
           </p>
         </div>
