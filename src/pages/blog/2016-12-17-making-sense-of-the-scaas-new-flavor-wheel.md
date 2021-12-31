@@ -6,8 +6,9 @@ description: Computer science fundamentals
 featuredpost: false
 featuredimage: /img/js.png
 tags:
-  - flavor
-  - tasting
+  - computer-science
+  - javascript
+  - arrays
 ---
 ![JS logo](/img/js.png)
 
