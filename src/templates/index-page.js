@@ -48,7 +48,7 @@ export const IndexPageTemplate = ({ image }) => {
             <div className="flex justify-center   ">
               <Link to="/" className="cursor-pointer">
                 <p>
-                  <span className="flex bg-clip-text text-transparent bg-gradient-to-r from-lime-100 to-lime-400 tracking-widest animate-pulse		">
+                  <span className="flex text-lime-400 tracking-widest animate-pulse		">
                     John Muskett
                   </span>
                 </p>

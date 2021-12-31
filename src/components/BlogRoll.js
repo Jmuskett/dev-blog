@@ -4,7 +4,7 @@ import { Link, graphql, StaticQuery } from "gatsby";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-
+import scrollHorizontal from "../img/scroll-horizontal.jpg";
 class BlogRollTemplate extends React.Component {
   render() {
     const { data } = this.props;
@@ -51,6 +51,7 @@ class BlogRollTemplate extends React.Component {
                 </ParallaxLayer>
               );
             })}
+          {/* <img src={scrollHorizontal} /> */}
         </Parallax>
       </div>
     );
