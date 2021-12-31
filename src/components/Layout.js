@@ -59,10 +59,8 @@ const TemplateWrapper = ({ children }) => {
         <div className="invisible md:visible transition-opacity ease-in  duration-75 container text-center flex  flex-initial justify-center flex-col  md:flex-row md:justify-between  ">
           <div className="flex justify-center   ">
             <Link to="/" className="cursor-pointer">
-              <p>
-                <span className=" text-white flex bg-clip-text md:text-transparent md:bg-gradient-to-r md:from-lime-100 md:to-lime-400 tracking-widest animate-pulse		">
-                  John Muskett
-                </span>
+              <p className=" text-white flex bg-clip-text md:text-transparent md:bg-gradient-to-r md:from-lime-100 md:to-lime-400 tracking-widest animate-pulse		">
+                John Muskett
               </p>
             </Link>
           </div>
