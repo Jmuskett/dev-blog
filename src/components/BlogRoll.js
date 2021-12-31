@@ -11,7 +11,7 @@ class BlogRollTemplate extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
     const numberOfPosts = posts ? posts.length : 0;
     return (
-      <div className="px-11 pt-48 flex  items-stretch justify-center">
+      <div className="px-11 pt-48 flex align-middle  items-stretch justify-center">
         <Parallax horizontal pages={numberOfPosts}>
           {posts &&
             posts.map(({ node: post }, idx) => {
