@@ -67,16 +67,10 @@ export const IndexPageTemplate = ({ image }) => {
         </ParallaxLayer>
 
         <div className="min-h-screen flex justify-center">
-          <ParallaxLayer
-            offset={4}
-            speed={1.5}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <RocketShip />
+          <ParallaxLayer offset={4} speed={1.5}>
+            <div className="py-24">
+              <RocketShip />
+            </div>
           </ParallaxLayer>
         </div>
         {/* <ParallaxLayer offset={5}>
