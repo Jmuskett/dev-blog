@@ -73,11 +73,6 @@ export const IndexPageTemplate = ({ image }) => {
             </div>
           </ParallaxLayer>
         </div>
-        {/* <ParallaxLayer offset={5}>
-        <div className="bg-white fixed bottom-0 min-w-full">
-          Here is my footer
-        </div>
-      </ParallaxLayer> */}
       </Parallax>
     </>
   );
