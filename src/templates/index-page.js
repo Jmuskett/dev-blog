@@ -39,7 +39,7 @@ export const IndexPageTemplate = ({ image }) => {
       </div>
 
       <Parallax pages={6} style={{ top: "0", left: "0" }}>
-        <ParallaxLayer offset={0.25} speed={2.5}>
+        <ParallaxLayer offset={0} speed={2.5}>
           <div className="pt-24">
             <Astronaught />
           </div>
