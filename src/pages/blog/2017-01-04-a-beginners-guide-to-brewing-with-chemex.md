@@ -6,8 +6,9 @@ description: An introduction to React hooks
 featuredpost: false
 featuredimage: /img/reactlogo.png
 tags:
-  - brewing
-  - chemex
+  - React
+  - React-hooks
+  - state-management
 ---
 ![React logo](/img/reactlogo.png)
 
