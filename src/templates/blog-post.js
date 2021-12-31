@@ -22,15 +22,13 @@ export const BlogPostTemplate = ({
       {helmet || ""}
       <div className="container content">
         <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
+          <div className="column is-10 is-offset-1 text-white">
+            <p className="text-white  text-2xl font-extrabold">{title}</p>
             <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
+                <p className="text-white font-bold">Tags</p>
                 <ul className="taglist">
                   {tags.map((tag) => (
                     <li key={tag + `tag`}>
