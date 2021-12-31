@@ -7,6 +7,7 @@ import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 import bgImage from "../img/bg.jpeg";
 import { Link } from "gatsby";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -55,8 +56,8 @@ const TemplateWrapper = ({ children }) => {
         style={{ backgroundImage: `url(${bgImage})` }}
         className=" text-4xl z-20  bg-violet-800 font-extrabold bg-fixed py-11 px-11 min-h-screen min-w-full"
       >
-        <div className="transition-opacity ease-in  duration-75 container text-center flex  flex-initial justify-center flex-col  md:flex-row md:justify-between fixed ">
-          <div className="flex justify-center md:fixed  ">
+        <div className="invisible md:visible transition-opacity ease-in  duration-75 container text-center flex  flex-initial justify-center flex-col  md:flex-row md:justify-between  ">
+          <div className="flex justify-center   ">
             <Link to="/" className="cursor-pointer">
               <p>
                 <span className="flex bg-clip-text text-transparent bg-gradient-to-r from-lime-100 to-lime-400 tracking-widest animate-pulse		">
@@ -65,12 +66,14 @@ const TemplateWrapper = ({ children }) => {
               </p>
             </Link>
           </div>
-          <div className="   md:flex md:fixed md:right-0 ">
+
+          <div className="   md:flex  md:right-0 ">
             <p className="text-white md:pr-11 ">About</p>
             <p className="text-white md:pr-11 ">Contact</p>
           </div>
         </div>
       </div>
+
       <div className="bg-slate-900 ">{children}</div>
       {/* <Footer /> */}
     </div>

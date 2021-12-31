@@ -24,7 +24,7 @@ class BlogRollTemplate extends React.Component {
                       {post.frontmatter.featuredimage ? (
                         <div>
                           <GatsbyImage
-                            className="mb-6  rounded-lg  hover:ring hover:ring-white hover:ring-offset-4 hover:ring-offset-slate-900 "
+                            className="mb-6  rounded-lg  hover:ring hover:ring-white hover:ring-offset-4 hover:ring-offset-red-500 "
                             style={{ width: "100%" }}
                             image={
                               post.frontmatter.featuredimage.childImageSharp
