@@ -55,7 +55,7 @@ class BlogRollTemplate extends React.Component {
         </Parallax>
         <div className="flex justify-center">
           <p className="text-white text-center font-extrabold p text-7xl animate-pulse fixed invisible md:visible md:bottom-40 ">
-            {"< >"}
+            {"<---->"}
           </p>
         </div>
       </div>

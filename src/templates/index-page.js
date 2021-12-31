@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
@@ -10,11 +10,25 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import spaceman from "../img/spaceman.svg";
 import { Astronaught } from "../components/Astronaught";
 import { RocketShip } from "../components/RocketShip";
+import { Moon } from "../components/Moon";
 import bgImage from "../img/bg.jpeg";
-
+import { Spring, animated, useSpring } from "react-spring";
+import VisibilitySensor from "react-visibility-sensor";
 // eslint-disable-next-line
 export const IndexPageTemplate = ({ image }) => {
   const heroImage = getImage(image) || image;
+  const [key, setKey] = useState(1);
+
+  const scrolling = useSpring({
+    from: { transform: "translate(100%,0)" },
+    to: { transform: "translate(0%,0)" },
+    config: { duration: 5000 },
+    reset: true,
+    reverse: key % 2 == 0,
+    onRest: () => {
+      setKey(key + 1);
+    },
+  });
 
   return (
     <>
@@ -81,6 +95,9 @@ export const IndexPageTemplate = ({ image }) => {
                 <p className="text-7xl font-bold animate-bounce">
                   <a href="mailto:j.muskett@me.com">Email me</a>
                 </p>
+              </div>
+              <div key={key}>
+                <Moon />
               </div>
             </div>
           </ParallaxLayer>
