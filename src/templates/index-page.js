@@ -10,59 +10,82 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import spaceman from "../img/spaceman.svg";
 import { Astronaught } from "../components/Astronaught";
 import { RocketShip } from "../components/RocketShip";
+import bgImage from "../img/bg.jpeg";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({ image }) => {
   const heroImage = getImage(image) || image;
 
   return (
-    <Parallax pages={6} style={{ top: "0", left: "0" }}>
-      <ParallaxLayer offset={0} speed={2.5}>
-        <div className="py-24">
-          <Astronaught />
-        </div>
-
-        <div className="visible md:invisible  duration-75 container text-center flex  flex-initial justify-center flex-col  md:flex-row md:justify-between     ">
+    <>
+      <div
+        style={{ backgroundImage: `url(${bgImage})` }}
+        className=" text-4xl z-20  bg-violet-800 font-extrabold bg-fixed py-11 px-11 min-h-screen min-w-full"
+      >
+        <div className="invisible md:visible transition-opacity ease-in  duration-75 container text-center flex  flex-initial justify-center flex-col  md:flex-row md:justify-between  ">
           <div className="flex justify-center   ">
             <Link to="/" className="cursor-pointer">
-              <p>
-                <span className="flex bg-clip-text text-transparent bg-gradient-to-r from-lime-100 to-lime-400 tracking-widest animate-pulse		">
-                  John Muskett
-                </span>
+              <p className=" text-white flex bg-clip-text md:text-transparent md:bg-gradient-to-r md:from-lime-100 md:to-lime-400 tracking-widest animate-pulse		">
+                John Muskett
               </p>
             </Link>
           </div>
-          <div className=" md:invibile">
-            <p className="text-white  ">About</p>
-            <p className="text-white  ">Contact</p>
+
+          <div className="   md:flex  md:right-0 ">
+            <p className="text-white md:pr-11 ">About</p>
+            <p className="text-white md:pr-11 ">Contact</p>
           </div>
         </div>
-      </ParallaxLayer>
-      <ParallaxLayer offset={2}>
-        <div className="z-30 bg-contain bg-no-repeat bg-center min-w-screen bg-clip-content bg-origin-border min-h-screen bg-red-500">
-          <BlogRoll />
-        </div>
-      </ParallaxLayer>
-
-      <div className="min-h-screen flex justify-center">
-        <ParallaxLayer
-          offset={4}
-          speed={1.5}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <RocketShip />
-        </ParallaxLayer>
       </div>
-      {/* <ParallaxLayer offset={5}>
+
+      <Parallax pages={6} style={{ top: "0", left: "0" }}>
+        <ParallaxLayer offset={0} speed={2.5}>
+          <div className="py-24">
+            <Astronaught />
+          </div>
+
+          <div className="visible md:invisible  duration-75 container text-center flex  flex-initial justify-center flex-col  md:flex-row md:justify-between     ">
+            <div className="flex justify-center   ">
+              <Link to="/" className="cursor-pointer">
+                <p>
+                  <span className="flex bg-clip-text text-transparent bg-gradient-to-r from-lime-100 to-lime-400 tracking-widest animate-pulse		">
+                    John Muskett
+                  </span>
+                </p>
+              </Link>
+            </div>
+            <div className=" md:invibile">
+              <p className="text-white  ">About</p>
+              <p className="text-white  ">Contact</p>
+            </div>
+          </div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={2}>
+          <div className="z-30 bg-contain bg-no-repeat bg-center min-w-screen bg-clip-content bg-origin-border min-h-screen bg-red-500">
+            <BlogRoll />
+          </div>
+        </ParallaxLayer>
+
+        <div className="min-h-screen flex justify-center">
+          <ParallaxLayer
+            offset={4}
+            speed={1.5}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <RocketShip />
+          </ParallaxLayer>
+        </div>
+        {/* <ParallaxLayer offset={5}>
         <div className="bg-white fixed bottom-0 min-w-full">
           Here is my footer
         </div>
       </ParallaxLayer> */}
-    </Parallax>
+      </Parallax>
+    </>
   );
 };
 

@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import bgImage from "../img/bg.jpeg";
 
 // eslint-disable-next-line
 export const BlogPostTemplate = ({
@@ -18,30 +19,53 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
-      {helmet || ""}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1 text-white">
-            <p className="text-white  text-2xl font-extrabold">{title}</p>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <p className="text-white font-bold">Tags</p>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
+    <>
+      <div
+        style={{ backgroundImage: `url(${bgImage})` }}
+        className=" text-4xl z-20  bg-violet-800 font-extrabold bg-fixed py-11 px-11 min-h-full min-w-full"
+      >
+        <div className="invisible md:visible transition-opacity ease-in  duration-75 container text-center flex  flex-initial justify-center flex-col  md:flex-row md:justify-between  ">
+          <div className="flex justify-center   ">
+            <Link to="/" className="cursor-pointer">
+              <p className=" text-white flex bg-clip-text md:text-transparent md:bg-gradient-to-r md:from-lime-100 md:to-lime-400 tracking-widest animate-pulse		">
+                John Muskett
+              </p>
+            </Link>
+          </div>
+
+          <div className="   md:flex  md:right-0 ">
+            <p className="text-white md:pr-11 ">About</p>
+            <p className="text-white md:pr-11 ">Contact</p>
           </div>
         </div>
       </div>
-    </section>
+
+      <section className="section">
+        {helmet || ""}
+
+        <div className="container content">
+          <div className="columns">
+            <div className="column is-10 is-offset-1 text-white">
+              <p className="text-white  text-2xl font-extrabold">{title}</p>
+              <p>{description}</p>
+              <PostContent content={content} />
+              {tags && tags.length ? (
+                <div style={{ marginTop: `4rem` }}>
+                  <p className="text-white font-bold">Tags</p>
+                  <ul className="taglist">
+                    {tags.map((tag) => (
+                      <li key={tag + `tag`}>
+                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

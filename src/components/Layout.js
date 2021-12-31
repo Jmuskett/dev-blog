@@ -52,25 +52,6 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       {/* <Navbar /> */}
-      <div
-        style={{ backgroundImage: `url(${bgImage})` }}
-        className=" text-4xl z-20  bg-violet-800 font-extrabold bg-fixed py-11 px-11 min-h-screen min-w-full"
-      >
-        <div className="invisible md:visible transition-opacity ease-in  duration-75 container text-center flex  flex-initial justify-center flex-col  md:flex-row md:justify-between  ">
-          <div className="flex justify-center   ">
-            <Link to="/" className="cursor-pointer">
-              <p className=" text-white flex bg-clip-text md:text-transparent md:bg-gradient-to-r md:from-lime-100 md:to-lime-400 tracking-widest animate-pulse		">
-                John Muskett
-              </p>
-            </Link>
-          </div>
-
-          <div className="   md:flex  md:right-0 ">
-            <p className="text-white md:pr-11 ">About</p>
-            <p className="text-white md:pr-11 ">Contact</p>
-          </div>
-        </div>
-      </div>
 
       <div className="bg-slate-900 ">{children}</div>
       {/* <Footer /> */}
