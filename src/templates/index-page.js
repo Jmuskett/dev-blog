@@ -61,7 +61,7 @@ export const IndexPageTemplate = ({ image }) => {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          className=" flex min-h-fit flex-col bg-red-500"
+          className=" flex min-h-screen flex-col bg-red-500"
           offset={1.75}
         >
           <div>
@@ -71,8 +71,17 @@ export const IndexPageTemplate = ({ image }) => {
 
         <div className="min-h-screen flex justify-center">
           <ParallaxLayer offset={3.25} speed={1.5}>
-            <div className="py-24">
+            <div className="md:py-24">
               <RocketShip />
+            </div>
+          </ParallaxLayer>
+          <ParallaxLayer offset={5} speed={1.5}>
+            <div className="z-10 py-48 bg-white min-h-screen">
+              <div className="flex justify-center align">
+                <p className="text-7xl font-bold animate-bounce">
+                  <a href="mailto:j.muskett@me.com">Email me</a>
+                </p>
+              </div>
             </div>
           </ParallaxLayer>
         </div>
