@@ -34,7 +34,7 @@ export const IndexPageTemplate = ({ image }) => {
     <>
       <div
         style={{ backgroundImage: `url(${bgImage})` }}
-        className=" text-4xl z-20  bg-violet-800 font-extrabold bg-fixed px-11 min-h-screen min-w-full"
+        className=" text-4xl   bg-violet-800 font-extrabold bg-fixed px-11 min-h-screen min-w-full"
       >
         <div className="invisible md:visible transition-opacity ease-in  duration-75 container text-center flex  flex-initial justify-center flex-col  md:flex-row md:justify-between  ">
           <div className="flex justify-center   ">
@@ -58,7 +58,7 @@ export const IndexPageTemplate = ({ image }) => {
             <Astronaught />
           </div>
 
-          <div className="visible md:invisible  duration-75 container text-center flex  flex-initial justify-center flex-col  md:flex-row md:justify-between     ">
+          <div className="visible py-24 md:invisible  duration-75 container text-center flex  flex-initial justify-center flex-col  md:flex-row md:justify-between     ">
             <div className="flex justify-center   ">
               <Link to="/" className="cursor-pointer">
                 <p>
@@ -75,15 +75,15 @@ export const IndexPageTemplate = ({ image }) => {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          className=" flex min-h-screen flex-col bg-red-500"
+          className=" flex min-h-[20%] flex-col bg-red-500 align-center "
           offset={1.4}
         >
-          <div>
+          <div className="">
             <BlogRoll />
           </div>
         </ParallaxLayer>
 
-        <div className="min-h-screen flex justify-center">
+        <div className="min-h-max flex justify-center">
           <ParallaxLayer offset={3} speed={1.5}>
             <div className="md:py-24">
               <RocketShip />
