@@ -11,7 +11,7 @@ class BlogRollTemplate extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
     const numberOfPosts = posts ? posts.length : 0;
     return (
-      <div className="px-11 md:pt-48 flex align-middle  items-stretch justify-center">
+      <div className="px-11 md:pt-48 flex flex-col md:flex-row align-middle  items-stretch justify-center">
         {posts &&
           posts.map(({ node: post }, idx) => {
             return (

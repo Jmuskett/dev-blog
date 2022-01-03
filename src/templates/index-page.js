@@ -61,17 +61,13 @@ export const IndexPageTemplate = ({ image }) => {
                 </p>
               </Link>
             </div>
-            <div className=" md:invibile">
-              <p className="text-white  ">About</p>
-              <p className="text-white  ">Contact</p>
-            </div>
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          className=" flex min-h-[20%] flex-col bg-red-500 align-center "
+          className=" flex flex-grow min-h-full md:min-h-[20%] bg-red-500 align-center "
           offset={1.4}
         >
-          <div className="flex flex-wrap  min-h-full flex-col items-stretch">
+          <div className="flex flex-wrap   flex-col ">
             <BlogRoll />
           </div>
         </ParallaxLayer>
