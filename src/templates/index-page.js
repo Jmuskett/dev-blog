@@ -4,16 +4,14 @@ import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
-import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import spaceman from "../img/spaceman.svg";
 import { Astronaught } from "../components/Astronaught";
 import { RocketShip } from "../components/RocketShip";
 import { Moon } from "../components/Moon";
 import bgImage from "../img/bg.jpeg";
-import { Spring, animated, useSpring } from "react-spring";
-import VisibilitySensor from "react-visibility-sensor";
+import { useSpring } from "react-spring";
+
 // eslint-disable-next-line
 export const IndexPageTemplate = ({ image }) => {
   const heroImage = getImage(image) || image;
@@ -34,7 +32,7 @@ export const IndexPageTemplate = ({ image }) => {
     <>
       <div
         style={{ backgroundImage: `url(${bgImage})` }}
-        className=" text-4xl   bg-violet-800 font-extrabold bg-fixed px-11 min-h-screen min-w-full"
+        className=" text-4xl py-11 px-11    bg-violet-800 font-extrabold bg-fixed bg-no-repeat bg-cover px-11 min-h-screen min-w-full"
       >
         <div className="invisible md:visible transition-opacity ease-in  duration-75 container text-center flex  flex-initial justify-center flex-col  md:flex-row md:justify-between  ">
           <div className="flex justify-center   ">
@@ -43,11 +41,6 @@ export const IndexPageTemplate = ({ image }) => {
                 John Muskett
               </p>
             </Link>
-          </div>
-
-          <div className="   md:flex  md:right-0 ">
-            <p className="text-white md:pr-11 ">About</p>
-            <p className="text-white md:pr-11 ">Contact</p>
           </div>
         </div>
       </div>
@@ -78,7 +71,7 @@ export const IndexPageTemplate = ({ image }) => {
           className=" flex min-h-[20%] flex-col bg-red-500 align-center "
           offset={1.4}
         >
-          <div className="">
+          <div className="flex flex-wrap  min-h-full flex-col items-stretch">
             <BlogRoll />
           </div>
         </ParallaxLayer>
