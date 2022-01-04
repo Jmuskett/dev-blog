@@ -64,7 +64,7 @@ export const IndexPageTemplate = ({ image }) => {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          className=" flex flex-grow min-h-full md:min-h-[20%] bg-red-500 align-center "
+          className=" flex flex-grow min-h-full md:min-h-[20%] bg-red-500 align-center justify-center "
           offset={1.4}
         >
           <div className="flex flex-wrap   flex-col ">
