@@ -20,7 +20,7 @@ class BlogRollTemplate extends React.Component {
                   className="text-4xl text-white hover:text-white py-11 hover:inset"
                   to={post.fields.slug}
                 >
-                  <article className="flex flex-col max-w-sm flex-wrap items-stretch min-h-full flex-1 text-center mx-11 px-11 py-11 my-11 border-solid  rounded-3xl shadow-xl hover:shadow-md  hover:cursor-pointer md:mx-6   ">
+                  <article className="flex flex-col max-w-sm min-h-full flex-1 text-center mx-11 px-11 py-11 my-11 border-solid  rounded-3xl shadow-xl hover:shadow-md  hover:cursor-pointer md:mx-6   ">
                     <header>
                       {post.frontmatter.featuredimage ? (
                         <div>
